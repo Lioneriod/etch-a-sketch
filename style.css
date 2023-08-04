@@ -1,6 +1,60 @@
 body{
   display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+  font-family: "Baloo 2",sans-serif;
+}
+.main{
+  display: flex;
   flex: 1;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.title{
+  color: #57799d;
+  text-align: center;
+  font-size: 32px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+.canvas{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  border-radius: 2px;
+  background-image: url("./images/canvas_texture.jpg");
+  gap: 2px;
+  max-height: 350px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.pixel{
+  padding: 5px;
+}
+
+.starter button{
+  font-family: "Baloo 2",sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  height: auto;
+  width: 150px;
+  background-color: #57799d;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #57799d;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.footer{
+  background-color: #57799d;
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
 }
