@@ -1,6 +1,16 @@
 const canvas = document.querySelector(".canvas");
 const starter = document.querySelector(".starter");
-const canvasSize = 19 ** 2;
+const canvasSize = canvasAsk();
+
+function canvasAsk(size) {
+  let maxSize = 550;
+  size = prompt("How many squares you want?", `The max value is ${maxSize}`);
+  if (size < maxSize) {
+    return size;
+  } else {
+    return (size = maxSize);
+  }
+}
 
 function canvasCreator(pixels) {
   for (let i = 0; i < pixels; i++) {
@@ -11,8 +21,4 @@ function canvasCreator(pixels) {
   }
   console.log(pixels);
 }
-
-starter.addEventListener("click", function starting() {
-  starter.removeEventListener("click", starting);
-  canvasCreator(canvasSize);
-});
+canvasCreator(canvasSize);
