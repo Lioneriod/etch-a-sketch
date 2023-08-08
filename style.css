@@ -32,14 +32,14 @@ body{
   margin-bottom: 20px;
 }
 
-.pixel{
+.square{
   transition:0s 15s;
   border-radius: 0px;
   padding: 8px;
   margin: 0px;
 }
 
-.pixel:hover{
+.square:hover{
   background-color: #57799d;
   transition: 0s;
 }
@@ -57,6 +57,29 @@ body{
   padding: 5px;
   margin-bottom: 20px;
 }
+
+.eraser button{
+  font-family: "Baloo 2",sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  height: auto;
+  width: 150px;
+  background-color: #57799d;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #57799d;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.eraser button:hover,
+.starter button:hover{
+  transition: 0.20s ease;
+  background-color: #FFFFFF;
+  color: #57799d;
+}
+
+
 
 .footer{
   background-color: #57799d;

@@ -1,24 +1,31 @@
 const canvas = document.querySelector(".canvas");
 const starter = document.querySelector(".starter");
-const canvasSize = canvasAsk();
+const eraser = document.querySelector(".eraser");
 
-function canvasAsk(size) {
-  let maxSize = 550;
-  size = prompt("How many squares you want?", `The max value is ${maxSize}`);
-  if (size < maxSize) {
-    return size;
-  } else {
-    return (size = maxSize);
+function canvasCreator(squares) {
+  for (let i = 0; i < squares; i++) {
+    let square = document.createElement("div");
+    square.id = "p" + i;
+    square.classList.add("square");
+    canvas.appendChild(square);
   }
 }
-
-function canvasCreator(pixels) {
-  for (let i = 0; i < pixels; i++) {
-    let pixel = document.createElement("div");
-    pixel.id = "p" + i;
-    pixel.classList.add("pixel");
-    canvas.appendChild(pixel);
+starter.addEventListener("click", () => {
+  const canvasSize = canvasAsk();
+  function canvasAsk(size) {
+    let maxSize = 550;
+    size = prompt("How many squares you want?", `The max value is ${maxSize}`);
+    if (size < maxSize) {
+      return size;
+    } else {
+      return (size = maxSize);
+    }
   }
-  console.log(pixels);
-}
-canvasCreator(canvasSize);
+  canvasCreator(canvasSize);
+});
+
+eraser.addEventListener("click", () => {
+  while (canvas.firstChild) {
+    canvas.removeChild(canvas.firstChild);
+  }
+});
