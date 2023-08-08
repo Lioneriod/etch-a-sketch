@@ -27,14 +27,23 @@ body{
   flex-wrap: wrap;
   flex: 1 1 auto;
   border-radius: 2px;
-  background-image: url("./images/canvas_texture.jpg");
+  border: 1px solid #57799d;
+  border-radius: 10px;
   gap: 2px;
   max-height: 350px;
   max-width: 400px;
   margin-bottom: 20px;
 }
+
 .pixel{
-  padding: 5px;
+  padding: 8px;
+  transition:0s 15s;
+  border-radius: 4px;
+}
+
+.pixel:hover{
+  background-color: #57799d;
+  transition: 0s;
 }
 
 .starter button{

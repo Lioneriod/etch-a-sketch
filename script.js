@@ -1,6 +1,6 @@
 const canvas = document.querySelector(".canvas");
 const starter = document.querySelector(".starter");
-const canvasSize = 26 ** 2;
+const canvasSize = 19 ** 2;
 
 function canvasCreator(pixels) {
   for (let i = 0; i < pixels; i++) {
@@ -12,6 +12,7 @@ function canvasCreator(pixels) {
   console.log(pixels);
 }
 
-starter.addEventListener("click", () => {
+starter.addEventListener("click", function starting() {
+  starter.removeEventListener("click", starting);
   canvasCreator(canvasSize);
 });
