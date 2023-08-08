@@ -40,8 +40,7 @@ body{
 }
 
 .square:hover{
-  background-color: #57799d;
-  transition: 0s;
+  transition: 0.2s ease;
 }
 
 .starter button{
@@ -57,6 +56,26 @@ body{
   padding: 5px;
   margin-bottom: 20px;
 }
+
+.rainbowMode button{
+  font-family: "Baloo 2",sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  height: auto;
+  width: 150px;
+  background-color: #57799d;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 1px solid #FFFFFF;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.rainbowMode button:hover {
+  background-image: 
+  linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
+
 
 .eraser button{
   font-family: "Baloo 2",sans-serif;
