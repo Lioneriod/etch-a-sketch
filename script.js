@@ -21,11 +21,6 @@ function canvasCreator(squares) {
             square.style.cssText = "background-color: red";
           });
           break;
-        case 0:
-          square.addEventListener("mouseenter", () => {
-            square.style.cssText = "background-color: red";
-          });
-          break;
         case 1:
           square.addEventListener("mouseenter", () => {
             square.style.cssText = "background-color: orange";
